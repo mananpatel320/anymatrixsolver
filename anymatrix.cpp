@@ -26,13 +26,13 @@ int main()
     while(k<R)
     {if(A[k][k]==0)            //Row interchange if element of primary diagonal of coeffecient matrix is zero
     {
-        for(int i=k+1;i<R;i++)   
+        for(int i=k+1;i<R;i++)
         {
-            if(A[i][k]!=0)     
+            if(A[i][k]!=0)
             {
                 for(int j=0;j<C;j++)
                 {
-                    t=A[i][j];       
+                    t=A[i][j];
                     A[i][j]=A[0][j];
                     A[0][j]=t;
                 }
@@ -41,14 +41,14 @@ int main()
         }
     }
     x=A[k][k];
-    if(A[k][k]!=1)           //Row transformation: Divide all the elements of the row by its first non-zero element from left side  
+    if(A[k][k]!=1)           //Row transformation: Divide all the elements of the row by its first non-zero element from left side
     {
         for(int j=k;j<C;j++)
         {
             A[k][j]/=x;
         }
     }
-    for(int i=k+1;i<=R;i++)  //Store values(in array B) of all the elements lying below(in same column as that element) the 
+    for(int i=k+1;i<=R;i++)  //Store values(in array B) of all the elements lying below(in same column as that element) the
     {	                     //first non-zero element of that row(from left side).
         B[i]=A[i][k];
     }
@@ -62,7 +62,7 @@ int main()
     ++k;
     }
     while(m<(R-1))
-    {for(int i=0;i<(R-m-1);i++)  //Conversion of matrix to Row Reduced Echelon form 
+    {for(int i=0;i<(R-m-1);i++)  //Conversion of matrix to Row Reduced Echelon form
     {
         B[i]=A[i][C-m-2];
     }
@@ -79,7 +79,7 @@ int main()
     cout<<"The solution to the system of equations is\n";  //Display solutions
     for(int i=0;i<R;i++)
     {
-        cout<<"X1="<<A[i][C-1];
+        cout<<"X"<<i+1<<" = "<<A[i][C-1];
         cout<<endl;
     }
     return 0;
