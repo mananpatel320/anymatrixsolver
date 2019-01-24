@@ -1,4 +1,7 @@
 #Linear Equation Solver
+******DISCLAIMER*****
+This code is not fully funcational. It's still under development and cannot pass certain test cases.
+
 The C++ program gives a solution of system of linear equations containing upto 100 unknowns.
 A 2D array is used to solve these equations.
 Mathematically speaking, Gauss-Jordan elimination method is used to solve the system of linear eqations.
