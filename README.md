@@ -33,5 +33,5 @@ Run and build the .cpp file.
 Two images are attached in repo representing the working of program in codeblocks IDE shell.
 
 NOTE:Please input n x (n+1) order matrices only. (where n<100)
-     (exp. 2x3 or 3x4 or 4x5 or 5x6 etc. order matrices are only valid)
+     (exp. 2x3 or 3x4 or 4x5 or 5x6 etc. order matrices are only valid).
      Also the system of equations must have a solution in order for the program to work.
