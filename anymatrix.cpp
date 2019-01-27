@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     float A[100][100],t,x,B[100];
-    int R,C,k=0,m=0;
+    int R,C,k=0,m=0,l=0;
     cout<<"Rows:";cin>>R;        //input rows in augmented matrix
     cout<<"Columns:";cin>>C;     //input columns in augmented matrix
     for(int i=0;i<R;i++)         //augmented matrix input loop
@@ -40,6 +40,27 @@ int main()
             }
         }
     }
+    /*for(int i=0;i<R;i++)
+    {
+        for(int j=0;j<C;j++)
+        {
+            cout<<A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    */
+    for(int j=0;j<C;j++)
+    {
+        if(A[k][j]!=0)
+            ++l;
+    }
+    if(l==0)
+    {
+        cout<<"\nThere are infinitely many solutions of this system of equations.\n";
+        return 0;
+    }
+    l=0;
     x=A[k][k];
     if(A[k][k]!=1)           //Row transformation: Divide all the elements of the row by its first non-zero element from left side
     {
@@ -59,6 +80,16 @@ int main()
             A[i][j]-=(A[k][j]*B[i]);
         }
     }
+    /*for(int i=0;i<R;i++)
+    {
+        for(int j=0;j<C;j++)
+        {
+            cout<<A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    */
     ++k;
     }
     while(m<(R-1))
@@ -73,8 +104,29 @@ int main()
             A[i][j]-=(A[R-m-1][j]*B[i]);
         }
     }
+    /*for(int i=0;i<R;i++)
+    {
+        for(int j=0;j<C;j++)
+        {
+            cout<<A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    */
     ++m;
     }
+    /*cout<<"OUTPUT MATRIX\n";
+    for(int i=0;i<R;i++)
+    {
+        for(int j=0;j<C;j++)
+        {
+            cout<<A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    */
     cout<<"The solution to the system of equations is\n";  //Display solutions
     for(int i=0;i<R;i++)
     {
