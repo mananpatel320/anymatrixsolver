@@ -26,15 +26,15 @@ int main()
     while(k<R)
     {if(A[k][k]==0)            //Row interchange if element of primary diagonal of coeffecient matrix is zero
     {
-        for(int i=k+1;i<R;i++)
+        for(int i=k+1;i<R;++i)
         {
             if(A[i][k]!=0)
             {
-                for(int j=0;j<C;j++)
+                for(int j=0;j<C;++j)
                 {
                     t=A[i][j];
-                    A[i][j]=A[0][j];
-                    A[0][j]=t;
+                    A[i][j]=A[k][j];
+                    A[k][j]=t;
                 }
                 break;
             }
@@ -75,7 +75,6 @@ int main()
     }
     ++m;
     }
-
     cout<<"The solution to the system of equations is\n";  //Display solutions
     for(int i=0;i<R;i++)
     {
