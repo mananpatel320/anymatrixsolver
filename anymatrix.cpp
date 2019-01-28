@@ -14,7 +14,7 @@ int main()
         }
     }
     cout<<endl;
-    cout<<"INPUT MATRIX\n";     //Display the matrix entered
+    cout<<"AUGMENTED MATRIX\n";     //Display the matrix entered
     for(int i=0;i<R;i++)
     {
         for(int j=0;j<C;j++)
@@ -23,6 +23,7 @@ int main()
         }
         cout<<endl;
     }
+    cout<<endl;
     while(k<R)
     {if(A[k][k]==0)            //Row interchange if element of primary diagonal of coefficient matrix is zero
     {
@@ -148,7 +149,7 @@ int main()
 
     ++m;
     }
-    cout<<"OUTPUT MATRIX\n";
+    cout<<"ROW REDUCED ECHELON FORM\n";
     for(int i=0;i<R;i++)
     {
         for(int j=0;j<C;j++)
