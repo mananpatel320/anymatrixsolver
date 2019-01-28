@@ -1,8 +1,6 @@
 #Linear Equation Solver
-******DISCLAIMER*****
-This code is not fully funcational. It's still under development and cannot pass certain test cases.
 
-The C++ program gives a solution of system of linear equations containing upto 100 unknowns.
+This C++ program gives a solution of system of linear equations containing upto 100 unknowns and 100 equations.
 A 2D array is used to solve these equations.
 Mathematically speaking, Gauss-Jordan elimination method is used to solve the system of linear eqations.
 The user has to input the augmented matrix, which in turn gets converted to Row Reduced Echelon Form to obtain solution.
@@ -37,4 +35,5 @@ Two images are attached in repo representing the working of program in codeblock
 
 NOTE:Please input n x (n+1) order matrices only. (where n<100)
      (exp. 2x3 or 3x4 or 4x5 or 5x6 etc. order matrices are only valid).
-     Also the system of equations must have a solution in order for the program to work.
+     The system of equations should neither be underdetermined nor overdetermined.
+     i.e the number of unknowns should be equal to number of equations in system. 
